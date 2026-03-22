@@ -3,8 +3,6 @@
 //
 //  Chain:
 //    data_in[3:0] → QAM_16 → zero_padd → ifft_twiddle → cyclic_prefix
-//
-//  All port names match the actual module files exactly.
 //  Output: 5 complex samples per OFDM symbol (CP + 4 data)
 //  Latency: 1 clock cycle (cyclic_prefix is the only register stage)
 // ============================================================
