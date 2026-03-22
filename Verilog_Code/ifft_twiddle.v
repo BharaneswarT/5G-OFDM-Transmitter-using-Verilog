@@ -1,12 +1,5 @@
 // ============================================================
 //  4-Point Radix-2 IFFT — no 1/N scaling
-//
-//  CHANGE from previous version: removed >>> 2 (divide by 4)
-//  Reason: with QAM values of ±1 and ±2, dividing by 4 causes
-//  total precision loss (1>>2 = 0). Hardware receivers don't
-//  need absolute amplitude — only relative values matter.
-//  Output range is now ±8 instead of ±2, fits in 16 bits fine.
-//
 //  Twiddle factor: W^(-1) = +j
 //    (a+jb)*j = -b + ja
 //    temp_r2 = -B1i,  temp_i2 = +B1r
