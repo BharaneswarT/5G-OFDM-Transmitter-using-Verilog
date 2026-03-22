@@ -8,7 +8,7 @@
 //    X[3] = (0, 0)   ← subcarrier 3  (zeroed)
 //
 //  NAMING FIX: changed i/q → r/i to match ifft_twiddle ports
-//  so the top module connections are unambiguous
+
 // ============================================================
 
 module zero_padd (
