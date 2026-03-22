@@ -1,19 +1,5 @@
 // ============================================================
 //  Cyclic Prefix Inserter — 4-point IFFT, CP length = 1
-//
-//  What this does:
-//    Takes 4 time-domain samples from IFFT: x[0] x[1] x[2] x[3]
-//    Outputs 5 samples:  x[3] x[0] x[1] x[2] x[3]
-//                        ^CP   ^----- original symbol ------^
-//
-//  Why x[3] specifically?
-//    CP = copy of the LAST N_cp samples placed at the FRONT.
-//    This makes the symbol "cyclically extended" — the channel
-//    convolution wraps around cleanly, preserving orthogonality.
-//
-//  Output model: all 5 samples appear in PARALLEL one clock
-//  after valid_in. Downstream must serialize them if needed.
-//
 //  Timing:
 //    Cycle 0: valid_in=1, IFFT data presented
 //    Cycle 1: valid_out=1, all outputs stable (1-cycle latency)
@@ -63,8 +49,6 @@ always @(posedge clk or negedge reset_n) begin
     end
     else begin
         valid_out <= 0;
-        // NOTE: outputs HOLD their last values (no zeroing here).
-        // This is intentional — downstream reads them while valid_out=1.
     end
 end
 
