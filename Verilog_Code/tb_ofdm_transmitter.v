@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 // ============================================================
 //  Testbench — ofdm_transmitter (full chain)
-//  Expected values match Python simulation (no >>> 2 scaling)
+
 //  Output appears 1 cycle after data_valid.
 // ============================================================
 module tb_ofdm_transmitter;
