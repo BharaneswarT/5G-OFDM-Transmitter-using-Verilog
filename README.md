@@ -17,6 +17,10 @@ RECEIVER PART ---> (CP Removal → FFT → 16-QAM Demodulation → Serial Output
 The design uses synchronous pipeline architecture with valid handshake signals for clean data flow between stages. 
 End-to-end simulation shows error-free symbol recovery in the ideal channel conditions.
 
+Signal Flow: 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7ac9e3bd-8131-4c97-8992-fc8647987bbf" />
+
+
 Transmitter Result:
 <img width="1920" height="1022" alt="Transmitter_result" src="https://github.com/user-attachments/assets/039f524b-fdc3-4f38-9a1b-bc2154b1f63c" />
 
