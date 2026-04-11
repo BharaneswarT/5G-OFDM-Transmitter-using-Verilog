@@ -19,3 +19,6 @@ End-to-end simulation shows error-free symbol recovery in the ideal channel cond
 
 Transmitter Result:
 <img width="1920" height="1022" alt="Transmitter_result" src="https://github.com/user-attachments/assets/039f524b-fdc3-4f38-9a1b-bc2154b1f63c" />
+
+Transciver Result:
+<img width="1906" height="1038" alt="image" src="https://github.com/user-attachments/assets/e837029a-6f15-4854-812c-80520c71f800" />
